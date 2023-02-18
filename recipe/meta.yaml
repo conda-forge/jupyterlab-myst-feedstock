@@ -1,28 +1,30 @@
-{% set version = "0.1.6" %}
+{% set version = "1.0.1" %}
 
 package:
   name: jupyterlab-myst
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyterlab-myst/jupyterlab-myst-{{ version }}.tar.gz
-  sha256: 519837ee4cc65722296911331ecd788a4a33cec8071c10c93f064770c6dffae4
+  url: https://pypi.io/packages/source/j/jupyterlab-myst/jupyterlab_myst-{{ version }}.tar.gz
+  sha256: 1fadd9800bb7f157abc719c589eddea898dae41a4f68e145b858fd67a5a8d540
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - jupyter-packaging >=0.10,<1
-    - jupyterlab >=3,<4
+    - hatch-jupyter-builder >=0.5
+    - hatch-nodejs-version
+    - hatchling >=1.4.0
+    - jupyterlab >=3.4.7,<4
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
-    - jupyter_server >=1.6,<2
-    - jupyterlab-markup >=1.0,<2.0
-    - python >=3.6
+    - python >=3.7
+  run_constrained:
+    - jupyterlab >=3.1,<4.0.0a0
 
 test:
   imports:
@@ -31,9 +33,9 @@ test:
     - pip check
     - jupyter labextension list
     - jupyter labextension list 1>labextensions 2>&1
-    - grep -iE "jupyterlab-myst.*v{{ version.replace(".", "\\.") }}.*enabled.*OK.*jupyterlab-myst" labextensions
+    - grep -iE "jupyterlab-myst.*v{{ version.replace(".", "\\.") }}.*enabled.*OK.*jupyterlab_myst" labextensions
   requires:
-    - jupyterlab >=3,<4
+    - jupyterlab >=3.1,<4.0.0a0
     - m2-grep  # [win]
     - pip
 
@@ -43,8 +45,7 @@ about:
   license: BSD-3-Clause
   license_file:
     - LICENSE
-    # TODO: follow up upstream
-    # - jupyterlab_myst/labextension/static/third-party-licenses.json
+    - jupyterlab_myst/labextension/static/third-party-licenses.json
 
 extra:
   recipe-maintainers:
