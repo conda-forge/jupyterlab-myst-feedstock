@@ -1,11 +1,11 @@
-About jupyterlab-myst
-=====================
+About jupyterlab-myst-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab-myst-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/executablebooks/jupyterlab-myst
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab-myst-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Myst renderer for JupyterLab
 
