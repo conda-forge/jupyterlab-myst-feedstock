@@ -18,13 +18,13 @@ requirements:
     - hatch-jupyter-builder >=0.5
     - hatch-nodejs-version
     - hatchling >=1.4.0
-    - jupyterlab >=3.4.7,<4
+    - jupyterlab >=4,<5
     - pip
     - python >=3.7
   run:
     - python >=3.7
   run_constrained:
-    - jupyterlab >=3.1,<4.0.0a0
+    - jupyterlab >=4,<5
 
 test:
   imports:
@@ -35,7 +35,7 @@ test:
     - jupyter labextension list 1>labextensions 2>&1
     - grep -iE "jupyterlab-myst.*v{{ version.replace(".", "\\.") }}.*enabled.*OK.*jupyterlab_myst" labextensions
   requires:
-    - jupyterlab >=3.1,<4.0.0a0
+    - jupyterlab >=4,<5
     - m2-grep  # [win]
     - pip
 
