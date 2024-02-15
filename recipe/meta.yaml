@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: jupyterlab-myst
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab-myst/jupyterlab_myst-{{ version }}.tar.gz
-  sha256: 789e002b73922622a47a2e1e14b3482925aa27de5d73183efc2fd0a79d52c6be
+  sha256: 935ae362c6d2969ae5ada09427692553f7cb926fd74c298ef203b7992f32de24
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - hatch-jupyter-builder >=0.5
-    - hatch-nodejs-version
+    - hatch-nodejs-version >=0.3.2
     - hatchling >=1.5.0
     - jupyterlab >=4,<5
     - pip
