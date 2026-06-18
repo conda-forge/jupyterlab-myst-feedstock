@@ -3,20 +3,23 @@ About jupyterlab-myst-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab-myst-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/executablebooks/jupyterlab-myst
+Home: https://pypi.org/project/jupyterlab-myst
 
 Package license: BSD-3-Clause
 
 Summary: A Myst renderer for JupyterLab
 
+Development: https://github.com/executablebooks/jupyterlab-myst
+
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15112&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyterlab-myst-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/jupyterlab-myst-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/jupyterlab-myst-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
