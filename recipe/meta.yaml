@@ -1,4 +1,4 @@
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
   name: jupyterlab-myst
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlab-myst/jupyterlab_myst-{{ version }}.tar.gz
-  sha256: 1502e776153a43588eeb26ce04fb20a0a401805e20edbc57090c9ac932bd42e0
+  sha256: c4e4b4b12da5a31ec6926d34ae7721f542892317011656a86f4e8fa0fbe7f367
 
 build:
   number: 0
